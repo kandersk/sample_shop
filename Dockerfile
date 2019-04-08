@@ -8,4 +8,6 @@ ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 COPY . /web/
 WORKDIR /web
+# setting up the executable setup.py
+RUN chmod 644 main.py
 # CMD python3 app.py  # To run the app automatically when the container is started, uncomment.
