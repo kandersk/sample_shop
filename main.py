@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from flask import Flask, Markup, request, redirect, render_template, url_for, g
 
 import sqlite3
