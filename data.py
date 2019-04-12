@@ -28,6 +28,6 @@ def get_matchs(word):
 
 
 # foo = get_item_info(6)
-search_string = "kindle"
+search_string = "kin"
 foo = get_matchs(search_string)
 print(foo)
