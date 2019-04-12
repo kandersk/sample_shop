@@ -19,13 +19,15 @@ def get_item_info(itemNumber):
 
 def get_matchs(word):
     db = get_db(DATABASE)
-    db.execute("select item from store having {} in title".format(word))
+    db.execute("select item from store where title like '%{}'".format(word))
     matches = db.fetchall()
-    matches_dict = ()
+    matches_dict = []
     for i in matches:
-        matches_dict.append(get_item_info(i))
+        matches_dict.append(get_item_info(i[0]))
     return matches_dict
 
+
+# foo = get_item_info(6)
 search_string = "kindle"
 foo = get_matchs(search_string)
 print(foo)
