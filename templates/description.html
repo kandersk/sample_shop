@@ -16,15 +16,14 @@
 <!-- ADD DESCRIPTION OF PRODUCT -->
  	<div class = "description">
 		<!-- <label>Description:</label> -->
-		<h1>{{ name }}</h1>
-		 <br/>
- 		<p>{{ desc }}</p>
+		<h1>Item: {{ name }}</h1>
+ 		<p>Description: {{ desc }}</p>
  	</div>
 	
 	
 <!--DISPLAY AMOUNT IN STOCK -->
  	<div class = "stock-quantity">
-		<label>There is {{ qty }} left.</label>
+		<label>There is {{ qty }} left in stock.</label>
  	</div>
 	
 	
@@ -40,15 +39,13 @@
 <!-- ALLOW CUSTOMER TO SELECT AMOUNT OF ITEM THEY WANT -->
     <div class = "customer-quantity">
 		<form method="post">
-		  <label>Choose quantity:</label>
-		  <select name="qty">
-			  <option value="{{ qty }}"> 1 </option>
-			  <option value="{{ qty }}"> 2 </option>
-			  <option value="{{ qty }}"> 3 </option>
-			  <option value="{{ qty }}"> 4 </option>
-			  <option value="{{ qty }}"> 5 </option>
-		  </select>
-		</form>
+      		<label>Qty:</label>
+      		<select name="qty">
+        		{% for n in range(1, qty+1) %}
+					<option value="{{ n }}">{{ n }}</option>
+        		{% endfor %}
+     		 </select>
+    	</form>
  	</div>
 
 <!--ADD TO CART -->

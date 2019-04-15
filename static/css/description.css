@@ -29,16 +29,17 @@ body{
 .description h1{
 	font-weight: 250;
 	font-size: 50px;
+	margin-block-end: 0px;
 }
 
 .description p{
 	font-weight:250;
-	font-size:15px;
+	font-size:25px;
 }
 
 .stock-quantity{
 	font-weight:250;
-	font-size:12px;
+	font-size:20px;
 	color:green;
 }
 
@@ -52,7 +53,7 @@ body{
 
 .shipping-fee{
 	font-weight:250;
-	font-size:12px;
+	font-size:20px;
 	color: green;
 	text-align: right;
 	top: 10px;
@@ -61,9 +62,9 @@ body{
 
 .customer-quantity{
 	font-weight:250;
-	font-size:15px;
+	font-size:20px;
 	padding: 5px;
-	background-color: blue;
+	background-color: #0000ff00;
 	top: 50px;
 	left: 50px;
 	width: 10em;

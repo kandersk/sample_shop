@@ -32,10 +32,12 @@ def description():
   name = dic['title']
   desc = dic['desc']
   #qty = dict['qty']
+  qty = 8
   price = dic['price']
   #shipping = dict['shp']
+  shipping = 20.55
 
-  return render_template("description.html", url = url, name = name, desc = desc, price = price)
+  return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping)
 
 if __name__ == "__main__":
   app.run(debug=True, host='0.0.0.0')
