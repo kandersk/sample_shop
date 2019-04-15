@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/description.css') }}">
+
+<body>
+	
+<!-- ON LEFT SIDE -  DISPLAY PICTURE OF ITEM-->
+  <div class = "split left">
+		<img src = "{{ url }}" alt = "Product image" width="600" height="500" >
+  </div>
+<!-- ON RIGHT SIDE	 -->
+  <div class = "split right">
+<!-- ADD DESCRIPTION OF PRODUCT -->
+ 	<div class = "description">
+		<!-- <label>Description:</label> -->
+		<h1>{{ name }}</h1>
+		 <br/>
+ 		<p>{{ desc }}</p>
+ 	</div>
+	
+	
+<!--DISPLAY AMOUNT IN STOCK -->
+ 	<div class = "stock-quantity">
+		<label>There is {{ qty }} left.</label>
+ 	</div>
+	
+	
+<!-- DISPLAY PRICE OF PRODUCT -->
+ 	<div class = "price">
+		<label>Price: ${{ price }}</label>
+ 	</div>
+<!--DISPLAY SHIPPING FEE -->
+ 	<div class = "shipping-fee">
+		<label>Shipping: ${{ shipping }}</label>
+ 	</div>
+
+<!-- ALLOW CUSTOMER TO SELECT AMOUNT OF ITEM THEY WANT -->
+    <div class = "customer-quantity">
+		<form method="post">
+		  <label>Choose quantity:</label>
+		  <select name="qty">
+			  <option value="{{ qty }}"> 1 </option>
+			  <option value="{{ qty }}"> 2 </option>
+			  <option value="{{ qty }}"> 3 </option>
+			  <option value="{{ qty }}"> 4 </option>
+			  <option value="{{ qty }}"> 5 </option>
+		  </select>
+		</form>
+ 	</div>
+
+<!--ADD TO CART -->
+ 	<!-- <div class = "add-cart"> -->
+		<input type="submit" name="Submit" class = "add-cart" value="Add to cart">
+ 	<!-- </div> -->
+</div>
+
+</body>
+</html>
