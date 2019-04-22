@@ -3,14 +3,10 @@ html *{
     font-family: 'Monsterrat', sans-serif;
 }
 
-
-
-
-
 body{
-	background-image: radial-gradient(DarkGray, #989898);	
+  background-image: radial-gradient(DarkGray, #989898);	
 }
- 
+
 .split {
   height: 100%;
   position: fixed;
@@ -81,29 +77,17 @@ body{
 }
 
 .add-cart{
-     padding:5px 15px; 
-     background:#ccc; 
-     border:0 none;
-     cursor:pointer;
-     -webkit-border-radius: 5px;
-     border-radius: 5px; 
-	 width: 15em;
-	 height: 2em;
- 	 font-size:30px;
-	 margin-top:15px;
-
-	
+  padding:5px 15px; 
+  background:#ccc; 
+  border:0 none;
+  cursor:pointer;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; 
+  width: 15em;
+  height: 2em;
+  font-size:30px;
+  margin-top:15px;
 }
-
-
-
-
-
-
-
-
-
-
 
 .dropbtn {
   background-color: #fff;
@@ -156,3 +140,15 @@ body{
 .dropdown a:hover {background-color: #ddd;}
 
 .show {display: block;}
+
+
+.body{
+  margin:unset;
+  display: flex;
+  justify-content: center;  
+}
+.body>.search{
+  width: 70%;
+  background: #e4e4e4;
+  height: 100vh;
+}
