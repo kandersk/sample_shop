@@ -20,7 +20,7 @@ def get_item_info(itemNumber):
 def get_matchs(word):
     matches_dict = []
     db = get_db(DATABASE)
-    db.execute("select item from store where instr(title,'{}')".format(word))
+    db.execute("select item from store where instr(title,'{}') > 1".format(word))
     matches = db.fetchall()
     print(len(matches))
     for i in matches:
