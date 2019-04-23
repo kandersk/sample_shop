@@ -23,19 +23,16 @@ def search():
   # parses results
   # formats on template
 
-  return render_template("search.html")
 
-@app.route('/description', methods=['GET','POST'])
-def description():
-  dic = data.get_item_info(6)
+@app.route('/<id>')
+def description(id):
+  dic = data.get_item_info(id)
   url = dic['url']
   name = dic['title']
   desc = dic['desc']
-  #qty = dict['qty']
-  qty = 8
+  qty = dic['qty']
   price = dic['price']
-  #shipping = dict['shp']
-  shipping = 20.55
+  shipping = dic['shp']
 
   return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping)
 
