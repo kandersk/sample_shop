@@ -17,6 +17,22 @@
       <a href="#contact">Contact</a>
     </div>
   </div>
+  {% for item in results %}
+  <div class="result">
+    <div class="result image">
+      {{item.url}}
+    </div>
+    <div class="result title">
+      {{item.title}}
+    </div>
+    <div class="result price">
+      {{item.price}}
+    </div>
+    <div class="result qty">
+      {{item.qty}}
+    </div>
+  </div>
+  {% endfor %}
 </div>
 
 <script>

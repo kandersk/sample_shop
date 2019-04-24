@@ -14,6 +14,14 @@ def home():
 
 @app.route('/search')
 def search():
+  results = get_matchs("M12x1.25-40")
+
+
+  # {'itemNum': 3220024, 'price': 14.97, 
+  # 'title': "'Hex head cap screw M12x1.25-40 (box/50)'", 
+  # 'url': "'https://www.mcmaster.com/mvB/Contents/gfx/ImageCache/913/91309A628p1-b01-digital@100p_636824767630548193.png'", 
+  # 'qty': 4, 'desc': "'Hex head cap screw M12x1.25-40 (box/50)'", 
+  # 'shp': 5.99}
 
   # search bar that accepts product by name
   # submit accepts the form input
@@ -21,7 +29,7 @@ def search():
   # retrieves database results
   # parses results
   # formats on template
-  return render_template("search.html")
+  return render_template("search.html", results = results)
 
 @app.route('/<id>')
 def description(id):
@@ -54,7 +62,7 @@ def get_item_info(itemNumber):
 def get_matchs(word):
   matches_dict = []
   db = get_db(DATABASE)
-  db.execute("select item from store where instr(title,'{}') > 1".format(word))
+  db.execute("select item from store where title like '%{}%'".format(word))
   matches = db.fetchall()
   print(len(matches))
   for i in matches:
