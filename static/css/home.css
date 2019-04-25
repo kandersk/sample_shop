@@ -89,6 +89,10 @@ body{
   margin-top:15px;
 }
 
+.search-button{
+	color: blue;
+}
+
 .dropbtn {
   background-color: #fff;
   color: black;
