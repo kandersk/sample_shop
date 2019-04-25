@@ -8,13 +8,15 @@
 <body class="body">
 <div class="search">
   <div class="dropdown">
-    <button onclick="myFunction()" class="dropbtn">Search</button>
+    <!-- <button onclick="myFunction()" class="dropbtn">Search</button>
     <div id="myDropdown" class="dropdown-content">
-      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-      <a href="#about">About</a>
-      <a href="#base">Base</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()"> -->
+      <form method="post">
+        <label for="Search:">Search</label>
+        <input name="Search" id="Search" value="{{ t['Search'] }}" required><br>
+        <input type="submit" value="Submit">
+      </form>
+
     </div>
   </div>
   {% if results %}

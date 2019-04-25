@@ -4,7 +4,7 @@ html *{
 }
 
 body{
-  background-image: radial-gradient(DarkGray, #989898);	
+  background-image: radial-gradient(DarkGray, #989898);
 }
 
 .split {
@@ -21,14 +21,14 @@ body{
 	top: 50px;
 	width: 60%;
 	object-fit: contain;
-  
+
 }
 
 .right {
-	
+
     right: 30px;
 	width: 40%;
-  
+
 }
 
 .description h1{
@@ -77,12 +77,12 @@ body{
 }
 
 .add-cart{
-  padding:5px 15px; 
-  background:#ccc; 
+  padding:5px 15px;
+  background:#ccc;
   border:0 none;
   cursor:pointer;
   -webkit-border-radius: 5px;
-  border-radius: 5px; 
+  border-radius: 5px;
   width: 15em;
   height: 2em;
   font-size:30px;
@@ -145,7 +145,7 @@ body{
 .body{
   margin:unset;
   display: flex;
-  justify-content: center;  
+  justify-content: center;
 }
 
 .results{
