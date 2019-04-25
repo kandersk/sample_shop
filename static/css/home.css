@@ -93,6 +93,25 @@ body{
 .search-button{
 	color: blue;
 }
+.proceed{
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+ 	width: 15em;
+ 	height: 2em;
+	font-size:30px;
+	margin-top:150px;
+}
+
+#ship{
+	font-size:15px;
+	color:green;
+}
+
+
 
 .dropbtn {
   background-color: #fff;
