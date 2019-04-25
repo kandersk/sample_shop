@@ -17,22 +17,29 @@
       <a href="#contact">Contact</a>
     </div>
   </div>
+  {% if results %}
+  <div class="results">
   {% for item in results %}
-  <div class="result">
-    <div class="result image">
-      {{item.url}}
+    <div class="result card">
+      <div class="result image">
+        <img src='{{item.url}}' alt='Image unavaulable' width="200" height="200" onerror="this.onerror=null;this.src='https://onmilwaukee.com/images/articles/op/ope-is-a-word/ope-is-a-word_fullsize_story1.jpg?20171228132743';">
+      </div>
+      <div class="result text">
+        <div class="result title">
+          {{item.title}}
+        </div>
+        <div class="result price">
+          Price: {{item.price}}
+        </div>
+        <div class="result qty">
+          Quantity: {{item.qty}}
+        </div>
+        <button class="result details-btn">Details</button>
+      </div>
     </div>
-    <div class="result title">
-      {{item.title}}
-    </div>
-    <div class="result price">
-      {{item.price}}
-    </div>
-    <div class="result qty">
-      {{item.qty}}
-    </div>
-  </div>
   {% endfor %}
+  </div>
+  {% endif %}
 </div>
 
 <script>
