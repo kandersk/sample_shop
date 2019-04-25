@@ -40,12 +40,18 @@
 
 <!-- ALLOW CUSTOMER TO SELECT AMOUNT OF ITEM THEY WANT -->
 
-
 <!--ADD TO CART -->
-	<form action = "/cart" method = "POST">
-		<input name = "qty" type = "text" class="text">
-		<input type = "submit" value = "submit" />
-	</form>
+	<div class = "customer-quantity">
+		<form action = "/cart" method = "POST">
+			<label>Qty:</label>
+			<select name="qty">
+				{% for n in range(1, qty+1) %}
+					<option value="{{ n }}">{{ n }}</option>
+				{% endfor %}
+			</select>
+			<input type = "submit" class = "add-cart" value="Add to cart" />
+		</form>
+	</div>
 	<div class="search-button">
 		<i class="glyphicon glyphicon-search" onclick="searchPage()">Search</i>
 	</div>
