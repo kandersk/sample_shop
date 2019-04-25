@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+
+<body>
+
+<!-- ON LEFT SIDE -  DISPLAY PICTURE OF ITEM-->
+  <div class = "split left">
+		<img src = "{{ url }}" alt = "Product image" width="600" height="500" >
+  </div>
+<!-- ON RIGHT SIDE	 -->
+  <div class = "split right">
+<!-- ADD DESCRIPTION OF PRODUCT -->
+ 	<div class = "description">
+		<!-- <label>Description:</label> -->
+		<h1>Item: {{ name }}</h1>
+ 	</div>
+
+<!-- DISPLAY PRICE OF PRODUCT -->
+ 	<div class = "price">
+		<label>Subtotal: ${{ subtotal }}</label>
+        <p>Shipping included</p>
+ 	</div>
+
+
+<!--ADD TO CART -->
+ 	<!-- <div class = "add-cart"> -->
+	  <input type="submit" name="Submit" class = "add-cart" value="Proceed to checkout">
+      <button class = "add-cart" onclick="searchPage()">Keep searching</button>
+
+<script>
+function searchPage() {
+  location.replace("{{ url_for('search') }}")
+}
+</script>
+
+ 	<!-- </div> -->
+</div>
+
+</body>
+</html>
