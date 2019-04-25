@@ -50,7 +50,15 @@
 
 <!--ADD TO CART -->
  	<!-- <div class = "add-cart"> -->
-		<input type="submit" name="Submit" class = "add-cart" value="Add to cart">
+	  <input type="submit" name="Submit" class = "add-cart" value="Add to cart">
+	  <button onclick="searchPage()">Keep searching</button>
+
+<script>
+function searchPage() {
+  location.replace("{{ url_for('search') }}")
+}
+</script>
+
  	<!-- </div> -->
 </div>
 
