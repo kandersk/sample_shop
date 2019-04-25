@@ -55,13 +55,10 @@ def cart(id):
   shipping = dic['shp']
   if request.method == 'POST':
     qtyC = request.form['qty']
-    subtotal = round(float(qtyC)*price + shipping, 2)
-    if qtyC == 1:
-      pl = "item"
-    else:
-      pl = "items"
-    return render_template("cart.html",qtyC = qtyC, url = url, name = name, subtotal = subtotal, pl = pl)
-  return render_template("cart.html", qtyC = [], url = url, name = name, subtotal = [], pl = [])
+    priceQty = round(float(qtyC)*price, 2)
+    total = round(float(qtyC)*price + shipping, 2)
+    return render_template("cart.html",qtyC = qtyC, url = url, name = name,priceQty = priceQty, shipping = shipping, total = total)
+  return render_template("cart.html", qtyC = [], url = url, name = name, subtotal = [])
 
 
 def get_db(DATABASE):

@@ -17,17 +17,16 @@ body{
 }
 
 .left {
-    left: 40px;
-	top: 50px;
+    left: 100px;
+	top: 100px;
 	width: 60%;
 	object-fit: contain;
 
 }
 
 .right {
-
     right: 30px;
-	width: 40%;
+	width: 60%;
 
 }
 
@@ -51,7 +50,30 @@ body{
 .price{
 	font-size: 30px;
 	font-weight: 250;
-	text-align: right;
+	top: 80px;
+	right: 50px;
+	padding-top: 40px;
+}
+
+.underline{
+    width: 25%;
+    border-color: black;
+    border-width: 3px;
+    margin-top: 0px
+}
+
+.cartprice{
+	font-size: 20px;
+	font-weight: 200;
+	top: 80px;
+	right: 50px;
+	padding-top: 40px;
+}
+
+.carttotal{
+	font-size: 30px;
+	color: red;
+	font-weight: 200;
 	top: 80px;
 	right: 50px;
 }
@@ -60,7 +82,6 @@ body{
 	font-weight:250;
 	font-size:20px;
 	color: green;
-	text-align: right;
 	top: 10px;
 	right: 50px;
 }
@@ -73,7 +94,6 @@ body{
 	top: 50px;
 	left: 50px;
 	width: 10em;
-	margin-top:25px;
 }
 
 .add-cart{
@@ -92,6 +112,7 @@ body{
 
 .search-button{
 	color: blue;
+	font-size: 20px;
 }
 .proceed{
     padding:5px 15px; 
