@@ -34,9 +34,9 @@ def search():
   # formats on template
     return render_template("search.html",t = t, results = results)
 
-@app.route('/<id>')
-def description(id):
-  dic = get_item_info(id)
+@app.route('/description', methods = ['GET','POST'])
+def description():
+  dic = get_item_info(3245337)
   url = dic['url']
   name = dic['title']
   desc = dic['desc']
@@ -44,15 +44,23 @@ def description(id):
   price = dic['price']
   shipping = dic['shp']
 
-  return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping)
+  if request.method == 'POST':
+    qtyC = request.form['qty']
+    return render_template("cart.html",qtyC = qtyC)
+  else:
+    return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping)
 
-@app.route('/cart')
+@app.route('/cart', methods = ['GET','POST'])
 def cart():
-  url = "https://images1.mcmaster.com/mvB/contents/gfx/large/91247a628p1-b01-digitall.png?ver=1546858187"
-  name = "hex"
-  qty = 10
-  subtotal = 100
-  return render_template("cart.html", url = url, name = name,qty = qty, subtotal = subtotal)
+  dic = get_item_info(3245337)
+  url = dic['url']
+  name = dic['title']
+  price = dic['price']
+  shipping = dic['shp']
+  if request.method == 'POST':
+    qtyC = request.form['qty']
+    subtotal = price + shipping
+    return render_template("cart.html",qtyC = qtyC, url = url, name = name, subtotal = subtotal)
 
 
 def get_db(DATABASE):

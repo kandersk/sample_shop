@@ -22,7 +22,7 @@
 
 <!-- DISPLAY PRICE OF PRODUCT -->
  	<div class = "price">
-		<label>Subtotal: ${{ subtotal }}</label>
+		<label>Subtotal({{ qtyC }}): $ {{ subtotal }}</label>
         <p>Shipping included</p>
  	</div>
 
@@ -30,7 +30,9 @@
 <!--ADD TO CART -->
  	<!-- <div class = "add-cart"> -->
 	  <input type="submit" name="Submit" class = "add-cart" value="Proceed to checkout">
-      <button class = "add-cart" onclick="searchPage()">Keep searching</button>
+	<div class="search-button">
+		<i class="glyphicon glyphicon-search" onclick="searchPage()">Search</i>
+	</div>
 
 <script>
 function searchPage() {
