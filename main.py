@@ -43,6 +43,14 @@ def description(id):
 
   return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping)
 
+@app.route('/cart')
+def cart():
+  url = "https://images1.mcmaster.com/mvB/contents/gfx/large/91247a628p1-b01-digitall.png?ver=1546858187"
+  name = "hex"
+  qty = 10
+  subtotal = 100
+  return render_template("cart.html", url = url, name = name,qty = qty, subtotal = subtotal)
+
 
 def get_db(DATABASE):
   #conn = sqlite3.connect('students_v1.db')
