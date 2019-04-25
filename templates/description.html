@@ -42,7 +42,7 @@
 
 <!--ADD TO CART -->
 	<div class = "customer-quantity">
-		<form action = "/cart" method = "POST">
+		<form action = "/{{ id }}/cart" method = "POST">
 			<label>Qty:</label>
 			<select name="qty">
 				{% for n in range(1, qty+1) %}

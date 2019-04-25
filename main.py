@@ -34,9 +34,9 @@ def search():
   # formats on template
     return render_template("search.html",t = t, results = results)
 
-@app.route('/description', methods = ['GET','POST'])
-def description():
-  dic = get_item_info(3245337)
+@app.route('/<id>', methods = ['GET','POST'])
+def description(id):
+  dic = get_item_info(id)
   url = dic['url']
   name = dic['title']
   desc = dic['desc']
@@ -44,15 +44,11 @@ def description():
   price = dic['price']
   shipping = dic['shp']
 
-  if request.method == 'POST':
-    qtyC = request.form['qty']
-    return render_template("cart.html",qtyC = qtyC)
-  else:
-    return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping)
+  return render_template("description.html", url = url, name = name, desc = desc,qty = qty, price = price, shipping = shipping, id = id)
 
-@app.route('/cart', methods = ['GET','POST'])
-def cart():
-  dic = get_item_info(3245337)
+@app.route('/<id>/cart', methods = ['GET','POST'])
+def cart(id):
+  dic = get_item_info(id)
   url = dic['url']
   name = dic['title']
   price = dic['price']
