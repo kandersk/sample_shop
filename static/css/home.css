@@ -239,6 +239,8 @@ body{
 }
 .result.image{
   width: unset;
+  display: flex;
+  align-items: center;
 }
 .result.text{
   font-size: 16px;

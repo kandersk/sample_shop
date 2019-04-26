@@ -30,14 +30,14 @@
   {% for item in results %}
     <div class="result card">
       <div class="result image">
-        <img src='{{item.url}}' alt='Image unavaulable' width="100" height="80" onerror="this.onerror=null;this.src='https://onmilwaukee.com/images/articles/op/ope-is-a-word/ope-is-a-word_fullsize_story1.jpg?20171228132743';">
+        <img src='{{item.url}}' alt='Image unavaulable' width="150" height="100" onerror="this.onerror=null;this.src='https://onmilwaukee.com/images/articles/op/ope-is-a-word/ope-is-a-word_fullsize_story1.jpg?20171228132743';">
       </div>
       <div class="result text">
         <div class="result title">
           {{item.title}}
         </div>
         <div class="result price">
-          Price: {{item.price}}
+          Price: ${{item.price}}
         </div>
         <div class="result qty">
           Quantity: {{item.qty}}
