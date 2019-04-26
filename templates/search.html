@@ -36,7 +36,10 @@
         <div class="result qty">
           Quantity: {{item.qty}}
         </div>
-        <button class="result details-btn">Details</button>
+
+        <form action = "/{{ item.itemNum }}" method = "POST">
+          <input type = "submit" class="result details-btn" value="Details"/>
+        </form>
       </div>
     </div>
   {% endfor %}
