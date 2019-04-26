@@ -14,25 +14,13 @@ def home():
 
 @app.route('/search', methods = ['GET','POST'])
 def search():
-    t = {'Search': ""}
-    if request.method =='POST':
-        t['Search'] = request.form['Search']
-    results = get_matchs(t['Search'])
+  t = {'Search': ""}
+  if request.method =='POST':
+    t['Search'] = request.form['Search']
+  results = get_matchs(t['Search'])
 
 
-  # {'itemNum': 3220024, 'price': 14.97,
-  # 'title': "'Hex head cap screw M12x1.25-40 (box/50)'",
-  # 'url': "'https://www.mcmaster.com/mvB/Contents/gfx/ImageCache/913/91309A628p1-b01-digital@100p_636824767630548193.png'",
-  # 'qty': 4, 'desc': "'Hex head cap screw M12x1.25-40 (box/50)'",
-  # 'shp': 5.99}
-
-  # search bar that accepts product by name
-  # submit accepts the form input
-  # sends to database as query
-  # retrieves database results
-  # parses results
-  # formats on template
-    return render_template("search.html",t = t, results = results)
+  return render_template("search.html",t = t, results = results)
 
 @app.route('/<id>', methods = ['GET','POST'])
 def description(id):
