@@ -110,6 +110,20 @@ body{
   margin-bottom: 15px;
 }
 
+.submit{
+  background:#ccc;
+  border:0 none;
+  width: 80px;
+  border-radius: 5px;
+  padding:5px 15px;
+}
+
+.search{
+  border-radius: 5px;
+  width: 400px;
+  height: 30px;
+}
+
 .search-button{
 	color: blue;
 	font-size: 20px;
@@ -161,8 +175,10 @@ body{
 #myInput:focus {outline: 3px solid #ddd;}
 
 .dropdown {
-  position: relative;
-  display: inline-block;
+  margin: auto;
+  width: 700px;
+  padding: 25px;
+  display: inline-blokc;
 }
 
 .dropdown-content {
@@ -194,6 +210,8 @@ body{
 }
 
 .results{
+  bottom: 0;
+  height: 90%;
   display: flex;
   width: 100%;
   flex-wrap: wrap;
@@ -227,10 +245,10 @@ body{
 }
 .result.title{
   font-size: 24px;
-  margin-bottom: 20px;
 }
 .result.price{
   font-size: 24px;
+  padding-top: 0px;
 }
 .result.qty{
   font-size: 24px;
@@ -257,7 +275,6 @@ body{
 	background-color:#f5f5f5;
 }
 .body>.search{
-  width: 80%;
-  background: #e4e4e4;
-  height: 100vh;
+  position: fixed;
+  height: 10%;
 }
