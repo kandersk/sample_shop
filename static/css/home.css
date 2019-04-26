@@ -126,6 +126,8 @@ body{
 
 .search-button{
 	color: blue;
+	width: 80px;
+	cursor: pointer;
 	font-size: 20px;
 }
 .proceed{
