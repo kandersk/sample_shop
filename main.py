@@ -58,7 +58,7 @@ def cart(id):
     priceQty = round(float(qtyC)*price, 2)
     total = round(float(qtyC)*price + shipping, 2)
     return render_template("cart.html",qtyC = qtyC, url = url, name = name,priceQty = priceQty, shipping = shipping, total = total)
-  return render_template("cart.html", qtyC = [], url = url, name = name, subtotal = [])
+  return render_template("cart.html", url = url, name = name)
 
 
 def get_db(DATABASE):
