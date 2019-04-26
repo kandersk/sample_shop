@@ -7,6 +7,12 @@ body{
   background-image: radial-gradient(DarkGray, #989898);
 }
 
+.wrapper{
+    display: grid;
+    grid-template-rows: 75px calc(100vh - 100px);
+    grid-template-areas: "search" "results";
+}
+
 .split {
   height: 100%;
   position: fixed;
@@ -177,10 +183,9 @@ body{
 #myInput:focus {outline: 3px solid #ddd;}
 
 .dropdown {
-  margin: auto;
-  width: 700px;
+  margin-left: 375px;
+  width: 550px;
   padding: 25px;
-  display: inline-blokc;
 }
 
 .dropdown-content {
